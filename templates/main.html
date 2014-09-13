@@ -1,21 +1,72 @@
 <html>
 <head>
-	<title>FB Post</title>
+    <title>FB Post Planner | Team 10</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/jquery.toastmessage.css" />
+    <script src="/static/js/vendors/jquery.js"></script>
+    <script src="/static/js/vendors/jquery-1.5.min.js"></script>
+    <script src="/static/js/vendors/jquery.toastmessage.js"></script>
+    <script src="/static/js/vendors/bootstrap.js"></script>
+    <script src="/static/js/app.js"></script>
 </head>
 
 <body>
-		 
-              <center>
-          <form>
-                <textarea id="fb-message" style="width:1000px height:1000px;"> </textarea>
-                <button id="btn-post" type="submit">Schedule post</button>
-            </form>
-    </center>
 
+   <div class="navbar navbar-default">
+    <div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Facebook Post Planner</a>
+  </div>
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+     <li><a href="#">More</a></li>
+    </ul>
+    <div id="fb-login" type="button" class="btn btn-primary navbar-btn navbar-right"><i class="fa fa-facebook"></i>  Sign in</div>
+    <div id="fb-logout" type="button" class="btn btn-primary navbar-btn navbar-right" style="display:none;"><i class="fa fa-facebook"></i>  Logout</div>
+  </div>
+  </div>
+</div>
+    
+   <div class="container">
+        <div class='row'>
+          <h3>Status:</h3>
+            <form role="form" id="postmessage">
+              <div class="form-group" style="margin-top: 20px;">
+                <textarea class="form-control" id="message" required placeholder="What's on your mind?" style="resize:none; height: 100px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default btn-facebook" style="margin-right: 50px;">Post</button>
+              <br><br>
+              <div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  </div>
+            </form>
+    
+
+        </div>
+
+
+<div class="toast-container toast-position-top-center"></div> 
+
+    </div>
+
+<br><br><br>
+ <div class ="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+    
+    <button type="button" class="navbar-inverse btn btn-primary pull-right" style="margin-top:10px;">Team 10</button>
+    <p class="navbar-text pull-right">RM SUMAYA & SHINEE CRISOSTOMO</p>
+    </div>
+    </div>
 </body>
 
- <script src="/static/js/vendors/jquery.js"></script>
-    <script src="/static/js/vendors/bootstrap.min.js"></script>
-    <script src="/static/js/vendors/handlebars.js"></script>
-    <script src="/static/js/app.js"></script>
 </html>
