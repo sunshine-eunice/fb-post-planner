@@ -1,42 +1,19 @@
+<!DOCTYPE html>
 <html>
 <body>
 <div class="container" style='top: 70px; position: relative;'>
-    <div class='row well blue'>
+    <div class="jumbotron" style="opacity: 0.9">
 
 
     <div class="postlist">
-    	<div><h3>Scheduled Posts:</h3></div>
-    	{% for post in posts %}
-    	
-       		<div class="panel panel-info">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">{{post.date_to_post}}
-			    	<a class="badge pull-right" href="/edit/{{post.key.id()}}">Edit</a>
-			    	<a class="badge pull-right" href="/delete/{{post.key.id()}}">Delete</a>
-			    </h3>
-			    
-			  </div>
-			  <div class="panel-body">
-			    {{post.message}}
-			  </div>
-			</div>
-    	{% else %}
-    	
-    	<div>
-       	 	No post to show
-       	 </div>
-       	 {% endfor %}
-
-    </div>
-
-    <div class="postlist">
-      <div><h3>Posted Message/s:</h3></div>
-      {% for post in posted %}
+      <div><center><h3 style="color:white;">Scheduled Posts:</h3></center></div>
+      <center>{% for post in posts %}</center>
       
           <div class="panel panel-info">
         <div class="panel-heading">
           <h3 class="panel-title">{{post.date_to_post}}
-            <a class="badge pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+            <a class="button pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+            <a class="button pull-right" href="/edit/{{post.key.id()}}">Edit</a>
           </h3>
           
         </div>
@@ -52,13 +29,37 @@
          {% endfor %}
 
     </div>
-    	
+
+    <div class="postlist">
+      <div><center><h3 style="color:white;">Posted Message/s:</h3></center></div>
+      {% for post in posted %}
+      
+          <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{post.date_to_post}}
+            <a class="button pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+          </h3>
+          
+        </div>
+        <div class="panel-body">
+          {{post.message}}
+        </div>
+      </div>
+      {% else %}
+      
+      <div>
+          <center>***No post to show***</center>
+         </div>
+         {% endfor %}
+
+    </div>
+      
 
 
     
 
 
-    	<!-- End of Content-->
+      <!-- End of Content-->
         <div class="fb-like" data-href="https://developers.facebook.com/apps/693517617401481/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
     </div>
 
